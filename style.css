@@ -1,0 +1,410 @@
+
+#logo {
+  position: left;
+  height: 30%;
+  width: 30%;
+  margin: 0;
+	font-size: 1.45em;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  height: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  list-style: none;
+}
+
+h2,h3,a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a, .main-nav li {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	/* text-align: center; */
+	display: block;
+}
+
+.main-nav li {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav li:hover {
+	color: #718daa;
+  /* font-size: 1.1em; */
+  transition: transform 0.1s ease-out 50ms;
+  transform: scale(1.2);
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  margin: 0px 0px 100px 0px;
+  cursor:pointer;
+}
+
+
+/* ===================================
+  Media Queries
+====================================== */
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+    		width: 100%;
+    		margin: 0 auto;
+    		max-width: 1150px;
+    	}
+	}
+}
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+  .formbox {
+    padding: 10px;
+    width: 100%;
+    margin: none;
+  }
+  .form {
+    padding: 10px;
+    width: 100%;
+    margin: none;
+  }
+  .dropdown {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 100px) {
+  .header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+  .formbox {
+    padding: 10px;
+    width: 100%;
+    margin: none;
+  }
+  .form {
+    padding: 10px;
+    width: 100%;
+    margin: none;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #grid-col { grid-template-columns: 100%; }
+}
+
+/* =================================
+  Media Queries ^^
+==================================== */
+
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 24px;
+  border: none;
+}
+
+.dropdown {
+  /* position: relative;
+  display: inline-block; */
+  width:10%;
+  text-align:center;
+  padding:2px;
+  margin:10px auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  transition: transform 0.1s ease-out 50ms;
+  transform: scale(1.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #0DABE3;
+}
+
+#placeholder1 {
+  text-align: center;
+}
+
+.chart {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-bottom: 100px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.slider {
+  width:30%;
+  height:150px;
+  padding:50px 10px;
+  background:#f5f5f5;
+  border:1px solid black;
+  border-radius:20px;
+  margin: 20px auto;
+  /* display:flex; */
+  /* align-items:center; */
+  box-shadow:0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.tinkerer-main {
+  display: flex;
+  align-items:center;
+}
+
+.tinkerer {
+  float:left;
+}
+
+#rangeTitle {
+  text-align: center;
+  font-size: 20px;
+}
+
+#rangeValue {
+  font-size:18px;
+  font-weight:600;
+  padding-left:20px;
+  color:black;
+}
+
+#percent {
+  font-size:18px;
+  color:black;
+}
+
+.slider input[type="range"] {
+  -webkit-appearance:none !important;
+  width:90%;
+  height:1px;
+  background:#00acee;
+  border:none;
+  outline:none;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance:none !important;
+  width:20px;
+  height:20px;
+  background:#f5f5f5;
+  border:2px solid #00acee;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb:hover {
+  background:#00acee;
+  transition: transform 0.1s ease-out 50ms;
+  transform: scale(1.5);
+}
+
+h1 {
+  color: black;
+}
+
+.formbox {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 20px;
+  display: none;
+  width: 50%;
+  margin: auto;
+}
+
+.requestComplete {
+  background-image: url("mountain.jpeg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  vertical-align: center;
+  display: none;
+}
+
+form {
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #0DABE3;
+}
+
+.formErrors {
+  color: red;
+  padding: 10px;
+}
+.formSuccesses {
+  padding: 10px;
+}
+
+.request-history-title {
+  font-size: 22px;
+}
+
+.banner {
+  position: relative;
+  height: 210px;
+  background-image: url("mountain.jpeg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+input, textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: Montserrat;
+}
+
+input {
+  width: calc(100% - 10px);
+  padding: 5px;
+}
+
+textarea {
+  width: calc(100% - 12px);
+  padding: 5px;
+  fint-size: 18px;
+}
+
+.item:hover p, input:hover::placeholder {
+  color: #0DABE3;
+}
+.item input:hover, .item textarea:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 6px 0 #0DABE3;
+  color: #0DABE3;
+}
+.item {
+  position: relative;
+  margin: 10px 0;
+}
+.btn-block {
+  margin-top: 10px;
+  text-align: center;
+}
+button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: black;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: #0DABE3;
+}
+
+
+/* #mountain {
+  background-image: url("mountain.jpeg");
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+#scorecards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-columns: repeat(7, 180px);
+}
+
+.scorecard-title {
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cell {
+  background: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
